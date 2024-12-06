@@ -1,0 +1,250 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+  &-top {
+    background-color: #1b1e20;
+    padding: 13px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    span {
+      font-weight: bold;
+      font-size: 14px;
+      color: #ffffff;
+      opacity: 0.8;
+      text-transform: uppercase;
+      margin-left: 60px;
+    }
+    &-close {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s linear;
+      font-size: 13px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-content {
+    padding: 10px 70px 0;
+    padding-right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s linear;
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: rgba($color: #ffffff, $alpha: 0.9);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &-nav {
+    display: flex;
+    margin-right: auto;
+
+    li {
+      margin: 0 30px;
+      position: relative;
+
+      a {
+        color: #000; /* Color negro por defecto */
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 17px;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 2;
+
+        /* Sombra blanca sutil por defecto */
+        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.6);
+
+        /* Transiciones suaves */
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+
+        &:hover,
+        &.active {
+          color: #c818b0; /* Color dorado en hover */
+          text-shadow: 0px 4px 8px rgba(255, 255, 255, 0.8); /* Sombra blanca intensa */
+          transform: translateY(-2px); /* Desplazamiento hacia arriba */
+        }
+
+        /* Subrayado animado */
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: #c818b0; /* Subrayado dorado */
+          transition: all 0.3s ease-in-out;
+          transform: translateX(-50%);
+        }
+
+        &:hover:after {
+          width: 100%; /* Extiende el subrayado en hover */
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 47px;
+        left: 200%;
+        transform: translateX(-50%);
+        width: 264px;
+        background: #ffffff;
+        padding: 25px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+
+        li {
+          padding: 0;
+          margin: 0;
+
+          a {
+            text-transform: initial;
+            font-size: 16px;
+            line-height: 170%;
+            color: #666666;
+            padding: 7.6px 40px;
+            display: block;
+
+            &:hover {
+              background-color: #d05278;
+              color: #ffffff;
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        ul {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &-options {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-left: 45px;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      i {
+        color: #222222;
+        transition: all 0.3s linear;
+        font-size: 19px;
+        &:hover {
+          color: #d05278;
+        }
+      }
+
+      span {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #d05278;
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.btn-menu {
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  height: 45px;
+  width: 22px;
+  position: absolute;
+  top: 72%;
+  transform: translateY(-50%);
+  right: 15px;
+  z-index: 50;
+
+  span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    left: calc(50% - 11px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 22px;
+
+    &:nth-child(1) {
+      top: calc(50% - 7px);
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 5px);
+    }
+  }
+
+  &.active {
+    cursor: pointer;
+
+    span {
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav,
+  .header-content,
+  .sidebar,
+  .footer,
+  .another-element {
+    display: none;
+  }
+}
