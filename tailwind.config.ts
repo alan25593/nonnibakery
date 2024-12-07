@@ -58,6 +58,16 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        vanilla: {
+          light: '#fdf5e6', // Color claro
+          DEFAULT: '#f5deb3', // Color base
+          dark: '#d2b48c', // Color oscuro
+        },
+        coffee: {
+          light: '#d2a679',
+          DEFAULT: '#a0522d',
+          dark: '#8b4513',
+        },
         purple: "#9747FF", 
         "gray-light": "#F5F5F5",
         

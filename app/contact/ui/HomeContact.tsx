@@ -10,7 +10,7 @@ export const HomeContact = () => {
       <div className="container mx-auto py-12 px-6 -mt-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
-            <FaMapMarkerAlt className="h-8 w-8 text-purple mr-4" />
+            <FaMapMarkerAlt className="h-8 w-8 text-coffee mr-4" />
             <div className="text-black">
               <h3 className="text-lg font-semibold">
                 <a
@@ -25,7 +25,7 @@ export const HomeContact = () => {
 
           <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
             <div className="mr-4">
-              <MdEmail className="h-8 w-8 text-purple" />
+              <MdEmail className="h-8 w-8 text-coffee" />
             </div>
             <div className="text-black">
               <h3 className="text-lg font-semibold">+1 (504) 390-5033</h3>
@@ -34,7 +34,7 @@ export const HomeContact = () => {
           </div>
 
           <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
-            <FaRegClock className="h-8 w-8 text-purple mr-4" />
+            <FaRegClock className="h-8 w-8 text-coffee mr-4" />
             <div className="text-black">
               <h3 className="text-lg font-semibold">Lunes - Viernes: 9 ~ 18</h3>
               <p className="text-gray-500"></p>

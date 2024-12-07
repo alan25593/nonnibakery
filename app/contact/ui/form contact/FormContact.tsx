@@ -64,7 +64,7 @@ export const FormContact = () => {
       <div className="w-full md:w-1/2 h-64 md:h-full bg-banner-contacto bg-cover bg-left"></div>
       <div className="w-full md:w-1/2 bg-white p-6 md:p-12 flex items-center justify-center flex-col">
         <div className="flex flex-col gap-2 pb-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-purple text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-coffee text-center">
             Contáctanos
           </h2>
           <h6 className="text-center font-lato mx-auto text-sm md:text-base">

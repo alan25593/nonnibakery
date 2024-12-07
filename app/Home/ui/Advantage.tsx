@@ -7,10 +7,10 @@ export const AdvantageSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Frescura */}
         <div className="flex flex-col items-center text-center">
-          <div className="bg-purple-100 p-4 rounded-full mb-4">
-            <FontAwesomeIcon icon={faLeaf} size="2x" className="text-purple-500" />
+          <div className="bg-coffee-100 p-4 rounded-full mb-4">
+            <FontAwesomeIcon icon={faLeaf} size="2x" className="text-coffee-500" />
           </div>
-          <h3 className="text-[24px] font-bold text-purple-600 leading-[24px] mb-2">
+          <h3 className="text-[24px] font-bold text-coffee-600 leading-[24px] mb-2">
             Frescura garantizada
           </h3>
           <p className="text-gray-600 max-w-[400px]">
@@ -20,10 +20,10 @@ export const AdvantageSection = () => {
 
         {/* Calidad Artesanal */}
         <div className="flex flex-col items-center text-center">
-          <div className="bg-purple-100 p-4 rounded-full mb-4">
-            <FontAwesomeIcon icon={faStar} size="2x" className="text-purple-500" />
+          <div className="bg-coffee-100 p-4 rounded-full mb-4">
+            <FontAwesomeIcon icon={faStar} size="2x" className="text-coffee-500" />
           </div>
-          <h3 className="text-[24px] font-bold text-purple-600 leading-[24px] mb-2">
+          <h3 className="text-[24px] font-bold text-coffee-600 leading-[24px] mb-2">
             Calidad artesanal
           </h3>
           <p className="text-gray-600 max-w-[400px]">
@@ -33,10 +33,10 @@ export const AdvantageSection = () => {
 
         {/* Personalización */}
         <div className="flex flex-col items-center text-center">
-          <div className="bg-purple-100 p-4 rounded-full mb-4">
-            <FontAwesomeIcon icon={faBirthdayCake} size="2x" className="text-purple-500" />
+          <div className="bg-coffee-100 p-4 rounded-full mb-4">
+            <FontAwesomeIcon icon={faBirthdayCake} size="2x" className="text-coffee-500" />
           </div>
-          <h3 className="text-[24px] font-bold text-purple-600 leading-[24px] mb-2">
+          <h3 className="text-[24px] font-bold text-coffee-600 leading-[24px] mb-2">
             Personalización
           </h3>
           <p className="text-gray-600 max-w-[400px]">

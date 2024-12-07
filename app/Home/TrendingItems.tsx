@@ -11,7 +11,7 @@ const CategoryItem = ({  title, bgType }: CategoryItemProps) => (
             className="absolute inset-0 z-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
             style={{ objectFit: "contain" }}
           />
-          <p className="text-2xl font-bold text-white relative z-10 group-hover:text-purple-400 transition-colors duration-300">
+          <p className="text-2xl font-bold text-white relative z-10 group-hover:text-coffee-400 transition-colors duration-300">
             {title}
           </p>
         </div>
@@ -24,7 +24,7 @@ export const TrendingItems = () => {
   return (
     <div className="flex flex-col text-center">
       {/* Títulos */}
-      <h3 className="font-mrs-saint-delafield text-[50px] text-purple pt-5 pb-2">
+      <h3 className="font-mrs-saint-delafield text-[50px] text-coffee pt-5 pb-2">
         Más solicitados
       </h3>
       <h5 className="text-[54px] font-medium text-black-primary leading-[54px]">

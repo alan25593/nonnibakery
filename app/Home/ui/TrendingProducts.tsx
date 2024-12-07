@@ -65,7 +65,7 @@ export const TrendingProducts = () => {
   return (
     <section className="overflow-x-hidden pt-20 pb-16">
       <div className="text-center pb-8 px-4">
-        <h2 className="font-mrs-saint-delafield text-6xl sm:text-6xl text-purple pb-5">
+        <h2 className="font-mrs-saint-delafield text-6xl sm:text-6xl text-coffee pb-5">
           Los más buscados
         </h2>
         <p className="max-w-xl mx-auto text-gray-900 font-medium">

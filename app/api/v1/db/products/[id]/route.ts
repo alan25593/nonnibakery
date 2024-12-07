@@ -12,6 +12,7 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import Busboy from "busboy";
 import { Readable } from "stream";
 import type { ProductRequestBody } from "@/types/type";
+import sharp from "sharp";
 
 const prisma = new PrismaClient();
 
@@ -265,18 +266,24 @@ export async function PUT(
           }
         }
 
+        // Convertir la imagen principal a WebP con redimensionamiento
+        const processedBuffer = await sharp(files.image.buffer)
+          .webp({ quality: 75 }) // Convertir a WebP con compresión
+          .resize({ width: 1920, withoutEnlargement: true }) // Redimensionar si es necesario
+          .toBuffer();
+
         const sanitizedFilename = files.image.filename
           .toLowerCase()
           .replace(/\s+/g, "_")
           .replace(/[^a-z0-9_\.-]/g, "");
-        const fileKey = `${uuidv4()}-${sanitizedFilename}`;
+        const fileKey = `${uuidv4()}-${sanitizedFilename}.webp`;
 
         await s3Client.send(
           new PutObjectCommand({
             Bucket: process.env.R2_BUCKET_NAME!,
             Key: fileKey,
-            Body: files.image.buffer,
-            ContentType: files.image.mimetype,
+            Body: processedBuffer, // Usar el buffer procesado
+            ContentType: "image/webp", // Indicar que el contenido es WebP
           })
         );
 

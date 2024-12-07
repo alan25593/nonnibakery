@@ -22,30 +22,30 @@ export const Footer = () => {
               href="mailto:nonnibakery.orders@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-purple"
+              className="hover:text-coffee"
             >
-              <MdEmail className="h-6 w-6 text-purple" />
+              <MdEmail className="h-6 w-6 text-coffee" />
             </a>
             <a
               href="https://wa.me/15043905033"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-purple"
+              className="hover:text-coffee"
             >
-              <FaPhone className="h-6 w-6 text-purple rotate-90" />
+              <FaPhone className="h-6 w-6 text-coffee rotate-90" />
             </a>
             <a
               href="https://www.instagram.com/nonnibakery"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-purple"
+              className="hover:text-coffee"
             >
-              <FaInstagram className="h-6 w-6 text-purple" />
+              <FaInstagram className="h-6 w-6 text-coffee" />
             </a>
           </div>
 
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-purple">Nonni Bakery</h1>
+            <h1 className="text-2xl font-bold text-coffee">Nonni Bakery</h1>
             <p className="text-center md:text-left">
               &ldquo;Garantizamos un servicio de excelencia con productos originales&rdquo;
             </p>
@@ -66,7 +66,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row relative justify-between items-center w-full text-center md:text-left space-y-4 md:space-y-0">
           <div className="mb-4 md:mb-0">
-            <h2 className="font-semibold text-lg text-purple">Ubicación</h2>
+            <h2 className="font-semibold text-lg text-coffee">Ubicación</h2>
             <a
               href="https://maps.app.goo.gl/PetDZ1tuyQq42h7z6"
               target="_blank"
@@ -82,10 +82,10 @@ export const Footer = () => {
           </div>
 
           <div className="mb-4 md:mb-0">
-            <h2 className="font-semibold text-lg text-purple">Contacto</h2>
+            <h2 className="font-semibold text-lg text-coffee">Contacto</h2>
             <div className="flex flex-col items-center md:items-start space-y-2 mt-2">
               <div className="flex items-center space-x-2">
-                <MdEmail className="h-5 w-5 text-purple" />
+                <MdEmail className="h-5 w-5 text-coffee" />
                 <a
                   href="mailto:nonnibakery.orders@gmail.com"
                   target="_blank"
@@ -96,7 +96,7 @@ export const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <FaPhone className="h-5 w-5 text-purple rotate-90" />
+                <FaPhone className="h-5 w-5 text-coffee rotate-90" />
                 <a
                   href="https://wa.me/15043905033"
                   target="_blank"
@@ -107,7 +107,7 @@ export const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <FaInstagram className="h-5 w-5 text-purple" />
+                <FaInstagram className="h-5 w-5 text-coffee" />
                 <a
                   href="https://www.instagram.com/nonnibakery"
                   target="_blank"
@@ -129,7 +129,7 @@ export const Footer = () => {
               href="https://www.nehros.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-1 hover:underline text-purple font-medium"
+              className="ml-1 hover:underline text-coffee font-medium"
             >
               Nehros
             </a>

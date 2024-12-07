@@ -31,7 +31,7 @@ export default function HeaderMobile() {
                   y: 5,
                 },
               }}
-              className="w-6 bg-purple h-px block"
+              className="w-6 bg-coffee h-px block"
             ></motion.span>
             <motion.span
               variants={{
@@ -42,7 +42,7 @@ export default function HeaderMobile() {
                   opacity: 0,
                 },
               }}
-              className="w-6 bg-purple h-px block"
+              className="w-6 bg-coffee h-px block"
             ></motion.span>
             <motion.span
               variants={{
@@ -54,7 +54,7 @@ export default function HeaderMobile() {
                   y: -5,
                 },
               }}
-              className="w-6 bg-purple h-px block"
+              className="w-6 bg-coffee h-px block"
             ></motion.span>
           </motion.button>
           <Image
@@ -116,28 +116,28 @@ export default function HeaderMobile() {
                 >
                   <li>
                     <Link href={"/"} onClick={toggleMobileNav}>
-                      <p className="text-5xl font-semibold text-purple cursor-pointer">
+                      <p className="text-5xl font-semibold text-coffee cursor-pointer">
                         Inicio
                       </p>
                     </Link>
                   </li>
                   <li>
                     <Link href={"/shop"} onClick={toggleMobileNav}>
-                      <p className="text-5xl font-semibold text-purple cursor-pointer">
+                      <p className="text-5xl font-semibold text-coffee cursor-pointer">
                         Productos
                       </p>
                     </Link>
                   </li>
                   <li>
                     <Link href={"/faq"} onClick={toggleMobileNav}>
-                      <p className="text-5xl font-semibold text-purple cursor-pointer">
+                      <p className="text-5xl font-semibold text-coffee cursor-pointer">
                         Preguntas
                       </p>
                     </Link>
                   </li>
                   <li>
                     <Link href={"/contact"} onClick={toggleMobileNav}>
-                      <p className="text-5xl font-semibold text-purple cursor-pointer">
+                      <p className="text-5xl font-semibold text-coffee cursor-pointer">
                         Contacto
                       </p>
                     </Link>
@@ -154,7 +154,7 @@ export default function HeaderMobile() {
                       opacity: 1,
                     },
                   }}
-                  className="w-full h-px bg-purple/30"
+                  className="w-full h-px bg-coffee/30"
                 ></motion.div>
                 <motion.ul
                   variants={{

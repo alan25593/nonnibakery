@@ -173,7 +173,7 @@ export const HomeIndividualProduct: React.FC<HomeIndividualProductProps> = ({
               className="relative w-[110px] inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-white bg-black rounded-md transition duration-300 overflow-hidden group"
               onClick={handleBuy}
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple to-purple transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-coffee to-coffee transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               <span className="relative z-10">
                 {inStock ? "Comprar" : "Consultar"}
               </span>

@@ -47,7 +47,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white to-purple">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white to-coffee">
       <div className="p-8 bg-white shadow-lg rounded-lg max-w-sm w-full">
         <h1 className="text-3xl font-bold mb-6 text-center">Iniciar Sesión</h1>
         {error && (
@@ -61,7 +61,7 @@ const LoginPage = () => {
           value={username}
           onChange={handleUsernameChange}
           onKeyPress={handleKeyPress}
-          className="border border-gray-300 p-3 mb-4 w-full rounded focus:outline-none focus:ring-2 focus:ring-purple"
+          className="border border-gray-300 p-3 mb-4 w-full rounded focus:outline-none focus:ring-2 focus:ring-coffee"
         />
         <input
           type="password"
@@ -69,11 +69,11 @@ const LoginPage = () => {
           value={password}
           onChange={handlePasswordChange}
           onKeyPress={handleKeyPress}
-          className="border border-gray-300 p-3 mb-6 w-full rounded focus:outline-none focus:ring-2 focus:ring-purple"
+          className="border border-gray-300 p-3 mb-6 w-full rounded focus:outline-none focus:ring-2 focus:ring-coffee"
         />
         <button
           onClick={handleLogin}
-          className="bg-purple text-white py-3 w-full rounded hover:bg-gray-200 transition duration-300"
+          className="bg-coffee text-white py-3 w-full rounded hover:bg-gray-200 transition duration-300"
         >
           Iniciar Sesión
         </button>

@@ -6,10 +6,10 @@ export const Breadcrumb = ({ page }: { page: string }) => {
       <h2 className="text-6xl text-center font-bold">{page}</h2>
       <div className="text-center">
         <p className="font-semibold md:text-lg text-base ">
-          <Link href={"/"} className="hover:text-purple transition-all">
+          <Link href={"/"} className="hover:text-coffee transition-all">
             Inicio
           </Link>{" "}
-          - <span className="text-purple font-semibold">{page}</span>
+          - <span className="text-coffee font-semibold">{page}</span>
         </p>
       </div>
     </div>

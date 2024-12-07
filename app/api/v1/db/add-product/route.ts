@@ -4,6 +4,7 @@ import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import Busboy from "busboy";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "stream";
+import sharp from "sharp";
 
 const prisma = new PrismaClient();
 
@@ -63,14 +64,20 @@ export async function POST(req: NextRequest) {
       const filesToProcess = Array.isArray(file) ? file : [file];
       for (const singleFile of filesToProcess) {
         console.log("Procesando archivo principal...");
-
+    
+        // Convertir a WebP y redimensionar si es necesario
+        const processedBuffer = await sharp(singleFile.buffer)
+          .webp({ quality: 75 }) // Convertir a WebP con calidad ajustada
+          .resize({ width: 1920, withoutEnlargement: true }) // Redimensionar si es necesario
+          .toBuffer();
+    
         const sanitizedFilename = singleFile.filename
           .toLowerCase()
           .replace(/\s+/g, "_")
           .replace(/[^a-z0-9_\.-]/g, "");
-
-        const fileKey = `${uuidv4()}-${sanitizedFilename}`;
-
+    
+        const fileKey = `${uuidv4()}-${sanitizedFilename}.webp`; // Agregar extensión .webp
+    
         const s3Client = new S3Client({
           region: "auto",
           endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
@@ -79,27 +86,24 @@ export async function POST(req: NextRequest) {
             secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
           },
         });
-
+    
         const uploadParams = {
           Bucket: process.env.R2_BUCKET_NAME!,
           Key: fileKey,
-          Body: singleFile.buffer,
-          ContentType: singleFile.mimetype,
+          Body: processedBuffer, // Usar el buffer procesado
+          ContentType: "image/webp", // Indicar que el contenido es WebP
         };
-
-        console.log(
-          "Subiendo archivo principal con los parámetros:",
-          uploadParams
-        );
+    
+        console.log("Subiendo archivo principal con los parámetros:", uploadParams);
         const command = new PutObjectCommand(uploadParams);
         await s3Client.send(command);
-
+    
         const encodedFileKey = encodeURIComponent(fileKey);
         imageUrl = `${process.env.R2_PUBLIC_HOST}/${encodedFileKey}`;
         console.log("Archivo principal subido exitosamente:", imageUrl);
       }
     }
-
+    
    
 
     console.log("Guardando producto en la base de datos...");

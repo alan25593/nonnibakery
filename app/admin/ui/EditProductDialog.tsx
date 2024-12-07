@@ -159,7 +159,7 @@ export const EditProductDialog: React.FC<EditProductDialogProps> = ({
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <button className="flex justify-center w-full">
-          <FiEdit className="text-purple hover:text-purple/80 transition duration-150 h-4 w-4" />
+          <FiEdit className="text-coffee hover:text-coffee/80 transition duration-150 h-4 w-4" />
         </button>
       </DialogTrigger>
       <DialogContent className="max-h-screen overflow-y-auto w-full max-w-4xl xl:max-w-5xl mx-auto h-[90vh]">
@@ -258,7 +258,7 @@ export const EditProductDialog: React.FC<EditProductDialogProps> = ({
                 />
                 <div className="flex items-center mt-2">
                   <FaExchangeAlt
-                    className="text-xl cursor-pointer text-gray-500 hover:text-purple"
+                    className="text-xl cursor-pointer text-gray-500 hover:text-coffee"
                     onClick={() => document.getElementById("image")?.click()}
                     title="Reemplazar imagen"
                   />

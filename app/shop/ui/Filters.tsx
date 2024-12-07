@@ -39,7 +39,7 @@ export const Filters: FC<FiltersProps> = ({
             <h3 className="font-semibold font-sans text-xl leading-6">
               Buscar producto
             </h3>
-            <hr className="w-full h-[3px] bg-purple" />
+            <hr className="w-full h-[3px] bg-coffee" />
           </div>
           <div className="relative">
             <Input
@@ -59,7 +59,7 @@ export const Filters: FC<FiltersProps> = ({
             <h3 className="font-semibold font-sans text-xl leading-6">
               Categoría
             </h3>
-            <hr className="w-full h-[3px] bg-purple" />
+            <hr className="w-full h-[3px] bg-coffee" />
           </div>
           <ul>
             {/* "Todos" option */}
@@ -68,7 +68,7 @@ export const Filters: FC<FiltersProps> = ({
               className={`cursor-pointer border-b-[1px] w-[80%] text-base py-4 
               ${
                 selectedCategory === null
-                  ? "font-bold text-purple border-b-purple"
+                  ? "font-bold text-coffee border-b-coffee"
                   : ""
               }`}
               onClick={() => setSelectedCategory(null)}
@@ -77,7 +77,7 @@ export const Filters: FC<FiltersProps> = ({
               <span
                 className={`${
                   selectedCategory === null
-                    ? "font-bold text-purple"
+                    ? "font-bold text-coffee"
                     : "text-gray-500"
                 }`}
               >
@@ -92,7 +92,7 @@ export const Filters: FC<FiltersProps> = ({
                 className={`cursor-pointer border-b-[1px] w-[80%] text-base py-4 
                 ${
                   selectedCategory === category
-                    ? "font-bold text-purple border-b-purple"
+                    ? "font-bold text-coffee border-b-coffee"
                     : ""
                 }`}
                 onClick={() =>
@@ -105,7 +105,7 @@ export const Filters: FC<FiltersProps> = ({
                 <span
                   className={`${
                     selectedCategory === category
-                      ? "font-bold text-purple"
+                      ? "font-bold text-coffee"
                       : "text-gray-500"
                   }`}
                 >
@@ -122,7 +122,7 @@ export const Filters: FC<FiltersProps> = ({
             <h3 className="font-semibold font-sans text-xl leading-6">
               Rango de precio
             </h3>
-            <hr className="w-full h-[3px] bg-purple" />
+            <hr className="w-full h-[3px] bg-coffee" />
           </div>
           <div>
             <Slider
@@ -155,7 +155,7 @@ export const Filters: FC<FiltersProps> = ({
         <Sheet>
           <SheetTrigger className="absolute -top-10 left-6">
             <p
-              className="w-8 h-8 rounded-full bg-purple flex items-center justify-center text-white shadow-redcoach-lg"
+              className="w-8 h-8 rounded-full bg-coffee flex items-center justify-center text-white shadow-redcoach-lg"
               aria-label="Abrir filtros"
             >
               <FilterIcon className="text-white" />
@@ -170,7 +170,7 @@ export const Filters: FC<FiltersProps> = ({
                 <h3 className="font-semibold font-sans text-xl leading-6">
                   Buscar producto
                 </h3>
-                <hr className="w-full h-[3px] bg-purple" />
+                <hr className="w-full h-[3px] bg-coffee" />
               </div>
               <div className="relative">
                 <Input
@@ -190,7 +190,7 @@ export const Filters: FC<FiltersProps> = ({
                 <h3 className="font-semibold font-sans text-xl leading-6">
                   Categoría
                 </h3>
-                <hr className="w-full h-[3px] bg-purple" />
+                <hr className="w-full h-[3px] bg-coffee" />
               </div>
               <ul>
                 {/* "Todos" option */}
@@ -199,7 +199,7 @@ export const Filters: FC<FiltersProps> = ({
                   className={`cursor-pointer border-b-[1px] w-[80%] text-base py-3
               ${
                 selectedCategory === null
-                  ? "font-bold text-purple border-b-purple"
+                  ? "font-bold text-coffee border-b-coffee"
                   : ""
               }`}
                   onClick={() => setSelectedCategory(null)}
@@ -208,7 +208,7 @@ export const Filters: FC<FiltersProps> = ({
                   <span
                     className={`${
                       selectedCategory === null
-                        ? "font-bold text-purple"
+                        ? "font-bold text-coffee"
                         : "text-gray-500"
                     }`}
                   >
@@ -223,7 +223,7 @@ export const Filters: FC<FiltersProps> = ({
                     className={`cursor-pointer border-b-[1px] w-[80%] text-base py-3
                 ${
                   selectedCategory === category
-                    ? "font-bold text-purple border-b-purple"
+                    ? "font-bold text-coffee border-b-coffee"
                     : ""
                 }`}
                     onClick={() =>
@@ -236,7 +236,7 @@ export const Filters: FC<FiltersProps> = ({
                     <span
                       className={`${
                         selectedCategory === category
-                          ? "font-bold text-purple"
+                          ? "font-bold text-coffee"
                           : "text-gray-500"
                       }`}
                     >
@@ -253,7 +253,7 @@ export const Filters: FC<FiltersProps> = ({
                 <h3 className="font-semibold font-sans text-xl leading-6">
                   Rango de precio
                 </h3>
-                <hr className="w-full h-[3px] bg-purple" />
+                <hr className="w-full h-[3px] bg-coffee" />
               </div>
               <div>
                 <Slider
