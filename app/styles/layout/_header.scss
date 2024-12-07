@@ -78,7 +78,7 @@
 
         &:hover,
         &.active {
-          color: #c818b0; /* Color dorado en hover */
+          color: #a0522d; /* Color dorado en hover */
           text-shadow: 0px 4px 8px rgba(255, 255, 255, 0.8); /* Sombra blanca intensa */
           transform: translateY(-2px); /* Desplazamiento hacia arriba */
         }
@@ -91,7 +91,7 @@
           left: 50%;
           width: 0;
           height: 2px;
-          background-color: #c818b0; /* Subrayado dorado */
+          background-color: #a0522d; /* Subrayado dorado */
           transition: all 0.3s ease-in-out;
           transform: translateX(-50%);
         }
